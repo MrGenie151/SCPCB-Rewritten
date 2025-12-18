@@ -1,0 +1,11 @@
+{
+  "dependencies": [
+    {
+      "name": "raylib-hx",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/foreignsasquatch/raylib-hx.git"
+    }
+  ]
+}
