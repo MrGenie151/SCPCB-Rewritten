@@ -1,0 +1,9 @@
+--class-path src
+-C .
+-D analyzer-optimize
+#-D mingw
+-lib raylib-hx
+-dce full
+-main Main
+-cpp bin/win
+-D HAXE_OUTPUT_PART=SCPCBR
