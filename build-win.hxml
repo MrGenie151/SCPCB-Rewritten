@@ -7,3 +7,4 @@
 -main Main
 -cpp bin/win
 -D HAXE_OUTPUT_PART=SCPCBR
+--cmd cp -r assets bin/unix/

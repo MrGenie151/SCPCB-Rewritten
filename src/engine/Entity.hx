@@ -28,4 +28,8 @@ class Entity {
 		}
 	}
 
+	public function isVisible() {
+		return this.visible;
+	}
+
 }

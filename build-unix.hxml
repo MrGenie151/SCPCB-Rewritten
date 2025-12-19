@@ -5,3 +5,4 @@
 -main Main
 -cpp bin/unix
 -D HAXE_OUTPUT_PART=SCPCBR
+--cmd cp -r assets bin/unix/

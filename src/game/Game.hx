@@ -1,0 +1,35 @@
+package game;
+
+import raylib.Raylib.*;
+import raylib.Types;
+
+class Game {
+
+	static final clearColor : Color = new Color(0,0,0,1);
+
+	static var CurTime : Int;
+	static var PrevTime : Int = 0;
+	static var LoopDelay : Int;
+	static var FPSfactor : Float;
+	static var FPSfactor2 : Float;
+	static var PrevFPSFactor : Float;
+
+	static var CanSave = true;
+	
+	public static function init() {
+		
+	}
+
+	public static function update() {
+		CurTime = Std.int(GetTime() * 1000);
+		var ElapsedTime : Float = (CurTime - PrevTime) / 1000.0;
+		PrevTime = CurTime;
+		PrevFPSFactor = FPSfactor;
+		FPSfactor = Math.max(Math.min(ElapsedTime * 70, 5.0), 0.2);
+		FPSfactor2 = FPSfactor;
+	}
+
+	public static function draw() {
+		ClearBackground(clearColor);
+	}
+}
