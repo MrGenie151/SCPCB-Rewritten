@@ -14,8 +14,9 @@ class Main
         //--------------------------------------------------------------------------------------
         final screenWidth:Int = 800;
         final screenHeight:Int = 450;
+		final clearColor : Color = new Color(0,0,0,1);
 
-        InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
+        InitWindow(screenWidth, screenHeight, "SCP: Containment Breach");
 
         SetTargetFPS(60); // Set our game to run at 60 frames-per-second
         //--------------------------------------------------------------------------------------
@@ -32,7 +33,7 @@ class Main
             //----------------------------------------------------------------------------------
             BeginDrawing();
 
-            ClearBackground(RAYWHITE);
+            ClearBackground(clearColor);
 
             DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
 

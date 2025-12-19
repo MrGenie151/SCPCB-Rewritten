@@ -1,8 +1,8 @@
 package engine;
 
-public class BlitzEmu {
+class BlitzEmu {
 
-    var wor
+    var world : List<Dynamic> = new List<Dynamic>();
 
     public function new() {
         
