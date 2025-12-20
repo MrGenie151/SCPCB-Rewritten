@@ -1,5 +1,6 @@
-package game;
+package game.states;
 
+import engine.renderables.Text;
 import engine.renderables.GuiImage;
 import engine.State;
 import raylib.Raylib.*;
@@ -8,10 +9,11 @@ import raylib.Types;
 // This is the main menu.
 class MenuState extends State {
 
-	public static var MenuScale : Float;
-	public static var MenuBack : GuiImage;
-	public static var MenuText : GuiImage;
-	public static var MenuWhite : GuiImage;
+	public var MenuScale : Float;
+	public var MenuBack : GuiImage;
+	public var MenuText : GuiImage;
+	public var MenuWhite : GuiImage;
+	public var MenuStr : Text;
 
 	public static var MainMenuOpen : Bool = true;
 	public static var MenuOpen : Float;
@@ -46,12 +48,15 @@ class MenuState extends State {
 		MenuBack = new GuiImage("assets/GFX/menu/back.jpg",0,0,MenuScale);
 		MenuText = new GuiImage("assets/GFX/menu/scptext.jpg",0,0,MenuScale);
 		MenuWhite = new GuiImage("assets/GFX/menu/menuwhite.jpg",0,0,MenuScale);
+		MenuStr = new Text("Secure. Contain. Protect.");
 		//SetTextureWrap(MenuWhite,TEXTURE_WRAP_REPEAT);
 		add(MenuBack);
 		add(MenuText);
+		add(MenuStr);
 	}
 
-	override function update() {
+	override function update(delta) {
+		super.update(delta);
 		var GraphicWidth = GetScreenWidth();
 		var GraphicHeight = GetScreenHeight();
 

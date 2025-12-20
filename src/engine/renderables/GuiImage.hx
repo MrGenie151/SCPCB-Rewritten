@@ -3,11 +3,11 @@ package engine.renderables;
 import raylib.Raylib.*;
 import raylib.Types;
 
-class GuiImage extends Renderable {
+class GuiImage extends Renderable2D {
 	var imagePath : String;
 	var texture : Texture;
 
-	public var position : Vector2;
+	//public var position : Vector2;
 	public var rotation : Float;
 	public var scale : Float;
 	public var tint : Color = WHITE;

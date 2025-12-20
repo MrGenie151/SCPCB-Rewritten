@@ -17,8 +17,10 @@ class State {
 		members = new List<Renderable>();
 	}
 
-	public function update() {
-		
+	public function update(delta) {
+		for (member in members) {
+			member.update(delta);
+		}
 	}
 
 	public function draw() {
@@ -32,5 +34,9 @@ class State {
 			members.add(member);
 		else
 			members.push(member);
+	}
+
+	public function remove(member : Renderable) {
+		members.remove(member);
 	}
 }

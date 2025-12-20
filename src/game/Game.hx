@@ -1,6 +1,6 @@
 package game;
 
-import game.MenuState;
+import game.states.*;
 import engine.State;
 import raylib.Raylib.*;
 import raylib.Types;
@@ -8,7 +8,7 @@ import raylib.Types;
 class Game {
 
 	static final clearColor : Color = new Color(0,0,0,1);
-	public static var currentState : State;
+	public static var currentState(default,null) : State;
 
 	static var CurTime : Int;
 	static var PrevTime : Int = 0;
@@ -31,7 +31,7 @@ class Game {
 		FPSfactor = Math.max(Math.min(ElapsedTime * 70, 5.0), 0.2);
 		FPSfactor2 = FPSfactor;
 
-		currentState.update();
+		currentState.update(GetFrameTime());
 	}
 
 	public static function draw() {
