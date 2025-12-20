@@ -8,7 +8,9 @@ Because it is built with Haxe, it requires both Haxe and a C++ compiler in order
 
 Also, if you are on Unix please install Raylib's development dependencies. The guide for installing those can be found [here](https://github.com/raysan5/raylib/wiki/Working-on-GNU-Linux#install-required-libraries).
 
-Simply run `haxe build-<platform>.hxml` to build it. Builds should be output in the `bin` directory.
+To install the repository's packages, install `hmm` by following the instructions [here](https://lib.haxe.org/p/hmm/). Then run `hmm install` in the repository directory.
+
+After that, simply run `haxe build-<platform>.hxml` to build it. Builds should be output in the `bin` directory.
 
 !!! WE MAY SWITCH TO LIME FOR OUR BUILD SYSTEM IN THE FUTURE!
 
