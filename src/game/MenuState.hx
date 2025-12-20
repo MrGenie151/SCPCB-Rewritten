@@ -1,16 +1,17 @@
 package game;
 
-import haxe.ds.Vector;
+import engine.renderables.GuiImage;
+import engine.State;
 import raylib.Raylib.*;
 import raylib.Types;
 
 // This is the main menu.
-class Menu {
+class MenuState extends State {
 
 	public static var MenuScale : Float;
-	public static var MenuBack : Texture;
-	public static var MenuText : Texture;
-	public static var MenuWhite : Texture;
+	public static var MenuBack : GuiImage;
+	public static var MenuText : GuiImage;
+	public static var MenuWhite : GuiImage;
 
 	public static var MainMenuOpen : Bool = true;
 	public static var MenuOpen : Float;
@@ -39,24 +40,29 @@ class Menu {
 
 	public static var MainMenuTab : Float = 0;
 
-	public static function init() {
+	public function new() {
+		super();
 		MenuScale = (GetScreenHeight() / 1024.0);
-		MenuBack = LoadTexture("assets/GFX/menu/back.jpg");
-		MenuText = LoadTexture("assets/GFX/menu/scptext.jpg");
-		MenuWhite = LoadTexture("assets/GFX/menu/menuwhite.jpg");
-		SetTextureWrap(MenuWhite,TEXTURE_WRAP_REPEAT);
+		MenuBack = new GuiImage("assets/GFX/menu/back.jpg",0,0,MenuScale);
+		MenuText = new GuiImage("assets/GFX/menu/scptext.jpg",0,0,MenuScale);
+		MenuWhite = new GuiImage("assets/GFX/menu/menuwhite.jpg",0,0,MenuScale);
+		//SetTextureWrap(MenuWhite,TEXTURE_WRAP_REPEAT);
+		add(MenuBack);
+		add(MenuText);
 	}
 
-	public static function UpdateMainMenu() {
+	override function update() {
 		var GraphicWidth = GetScreenWidth();
 		var GraphicHeight = GetScreenHeight();
 
 		ShowCursor();
-		DrawTextureEx(MenuBack,new Vector2(0,0),0,MenuScale,WHITE);
-		DrawTextureEx(MenuText,new Vector2(GetScreenWidth() / 2 - MenuText.width / 2, GetScreenHeight() - 20 * MenuScale - MenuText.height),0,MenuScale,WHITE);
+		//DrawTextureEx(MenuBack,new Vector2(0,0),0,MenuScale,WHITE);
+		//DrawTextureEx(MenuText,new Vector2(GetScreenWidth() / 2 - MenuText.width / 2, GetScreenHeight() - 20 * MenuScale - MenuText.height),0,MenuScale,WHITE);
+		MenuText.position.x = GetScreenWidth() / 2 - MenuText.width / 2;
+		MenuText.position.y = GetScreenHeight() - 20 * MenuScale - MenuText.height;
 
 		if (GetScreenWidth() > 1240 * MenuScale) {
-			DrawTexturePro(MenuWhite, new Rectangle(0,5,512, 7 * MenuScale),new Rectangle(0,0,(GraphicWidth - 1240 * MenuScale) + 300, 7 * MenuScale),new Vector2(985.0 * MenuScale, 407.0 * MenuScale),0,WHITE);
+			//DrawTexturePro(MenuWhite, new Rectangle(0,5,512, 7 * MenuScale),new Rectangle(0,0,(GraphicWidth - 1240 * MenuScale) + 300, 7 * MenuScale),new Vector2(985.0 * MenuScale, 407.0 * MenuScale),0,WHITE);
 		}
 	}
 

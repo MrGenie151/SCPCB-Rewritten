@@ -1,23 +1,26 @@
 package game;
 
+import game.MenuState;
+import engine.State;
 import raylib.Raylib.*;
 import raylib.Types;
 
 class Game {
 
 	static final clearColor : Color = new Color(0,0,0,1);
+	public static var currentState : State;
 
 	static var CurTime : Int;
 	static var PrevTime : Int = 0;
 	static var LoopDelay : Int;
-	static var FPSfactor : Float;
+	public static var FPSfactor : Float;
 	static var FPSfactor2 : Float;
 	static var PrevFPSFactor : Float;
 
 	static var CanSave = true;
 	
 	public static function init() {
-		Menu.init();
+		currentState = new MenuState();
 	}
 
 	public static function update() {
@@ -27,12 +30,12 @@ class Game {
 		PrevFPSFactor = FPSfactor;
 		FPSfactor = Math.max(Math.min(ElapsedTime * 70, 5.0), 0.2);
 		FPSfactor2 = FPSfactor;
+
+		currentState.update();
 	}
 
 	public static function draw() {
 		ClearBackground(clearColor);
-		if (Menu.MainMenuOpen) {
-			Menu.UpdateMainMenu();
-		}
+		currentState.draw();
 	}
 }

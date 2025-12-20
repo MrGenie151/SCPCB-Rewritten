@@ -1,5 +1,7 @@
 package engine;
 
+import engine.renderables.Entity;
+
 class World {
 
 	private static function getVisible() {
@@ -13,7 +15,7 @@ class World {
 
     public static function render() {
 		for (entity in getVisible()) {
-			entity.render();
+			entity.draw();
 		}
 	}
 }

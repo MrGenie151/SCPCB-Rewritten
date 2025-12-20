@@ -1,9 +1,9 @@
-package engine;
+package engine.renderables;
 
 import raylib.Raylib.*;
 import raylib.Types;
 
-class Entity {
+class Entity extends Renderable {
 	private var visible : Bool = true;
 	private var name : String = "Entity";
 	private var model : Model;
@@ -19,11 +19,11 @@ class Entity {
 			this.parent = parent;
 	}
 
-	public function render() {
+	override public function draw() {
 		if (model != null) {
 			DrawModel(model,globalPosition,1,RAYWHITE);
 			for (child in children) {
-				child.render();
+				child.draw();
 			}
 		}
 	}
