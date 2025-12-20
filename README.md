@@ -13,6 +13,6 @@ Simply run `haxe build-<platform>.hxml` to build it. Builds should be output in 
 !!! WE MAY SWITCH TO LIME FOR OUR BUILD SYSTEM IN THE FUTURE!
 
 # License
-Since it is based on the SCP Wiki and SCP: Containment Breach, this project is licensed under the [Creative Commons Attribution-ShareAlike 4.0 License](http://creativecommons.org/licenses/by-sa/3.0/). The full license can be found on the license tab. Links to the original sources can be found below:
+Since it is based on the SCP Wiki and SCP: Containment Breach, this project is licensed under the [Creative Commons Attribution-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/). The full license can be found on the license tab. Links to the original sources can be found below:
 - [SCP: CB source code](https://github.com/Regalis11/scpcb/)
 - [SCP Wiki](https://scp-wiki.wikidot.com/)
