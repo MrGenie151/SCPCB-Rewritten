@@ -17,7 +17,7 @@ class Game {
 	static var CanSave = true;
 	
 	public static function init() {
-		
+		Menu.init();
 	}
 
 	public static function update() {
@@ -31,5 +31,8 @@ class Game {
 
 	public static function draw() {
 		ClearBackground(clearColor);
+		if (Menu.MainMenuOpen) {
+			Menu.UpdateMainMenu();
+		}
 	}
 }
