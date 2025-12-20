@@ -20,6 +20,7 @@ class Game {
 	static var CanSave = true;
 	
 	public static function init() {
+		MusicManager.init();
 		currentState = new MenuState();
 	}
 
@@ -30,7 +31,8 @@ class Game {
 		PrevFPSFactor = FPSfactor;
 		FPSfactor = Math.max(Math.min(ElapsedTime * 70, 5.0), 0.2);
 		FPSfactor2 = FPSfactor;
-
+		
+		MusicManager.update();
 		currentState.update(GetFrameTime());
 	}
 
