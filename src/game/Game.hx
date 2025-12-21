@@ -21,6 +21,7 @@ class Game {
 	
 	public static function init() {
 		MusicManager.init();
+		GameFonts.init();
 		currentState = new MenuState();
 	}
 

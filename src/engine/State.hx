@@ -12,9 +12,15 @@ class State {
 
 	public var members : List<Renderable>;
 	private var rendermode : RenderMode = RENDERMODE_2D;
+	public var alive(default, null) : Bool = true;
 
 	public function new() {
 		members = new List<Renderable>();
+		create();
+	}
+
+	public function create() { // Function so states don't overwrite the new function
+		
 	}
 
 	public function update(delta) {
