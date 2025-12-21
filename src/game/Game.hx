@@ -22,7 +22,7 @@ class Game {
 	public static function init() {
 		MusicManager.init();
 		GameFonts.init();
-		currentState = new MenuState();
+		currentState = new TestState3D();
 	}
 
 	public static function update() {
@@ -38,7 +38,7 @@ class Game {
 	}
 
 	public static function draw() {
-		ClearBackground(clearColor);
+		ClearBackground(RAYWHITE);
 		currentState.draw();
 	}
 }
