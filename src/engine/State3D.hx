@@ -5,11 +5,16 @@ import raylib.Types;
 
 class State3D extends State {
 
-	public var guiMembers : List<Renderable2D> = new List<Renderable2D>();
+	public var members3D : List<Renderable3D> = new List<Renderable3D>();
 	public var camera : Camera3D = new Camera3D();
 	
 	public function new() {
 		super();
+		camera.projection = CameraProjection.CAMERA_PERSPECTIVE;
+		camera.fovy = 70;
+		camera.position = new Vector3(0,0,0);
+		camera.target = new Vector3(0.0, 0.0, 0.0); // Camera looking at point
+		camera.up = new Vector3(0.0, 1.0, 0.0); // Camera up vector (rotation towards target)
 	}
 
 	public function custom3DDraw() {
@@ -17,25 +22,25 @@ class State3D extends State {
 	}
 
 	override function draw() {
-		BeginMode3D(camera);
 		super.draw();
+		BeginMode3D(camera);
+		for (member in members3D) {
+			member.draw();
+		}
 		custom3DDraw();
 		EndMode3D();
 
-		for (member in guiMembers) {
-			member.draw();
-		}
 	}
 
-	public function add2D(member : Renderable2D, front : Bool = true) {
+	public function add2D(member : Renderable3D, front : Bool = true) {
 		if (front)
-			guiMembers.add(member);
+			members3D.add(member);
 		else
-			guiMembers.push(member);
+			members3D.push(member);
 	}
 
-	public function remove2D(member : Renderable2D) {
-		guiMembers.remove(member);
+	public function remove2D(member : Renderable3D) {
+		members3D.remove(member);
 	}
 
 }

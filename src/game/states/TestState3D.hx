@@ -7,11 +7,6 @@ import raylib.Types;
 class TestState3D extends State3D {
 	
 	override function create() {
-		camera.projection = CameraProjection.CAMERA_PERSPECTIVE;
-		camera.fovy = 70;
-		camera.position = new Vector3(0,0,0);
-		camera.target = new Vector3(0.0, 0.0, 0.0); // Camera looking at point
-		camera.up = new Vector3(0.0, 1.0, 0.0); // Camera up vector (rotation towards target)
 		DisableCursor();
 	}
 

@@ -10,12 +10,12 @@ enum RenderMode {
 
 class State {
 
-	public var members : List<Renderable>;
+	public var members : List<Renderable2D>;
 	private var rendermode : RenderMode = RENDERMODE_2D;
 	public var alive(default, null) : Bool = true;
 
 	public function new() {
-		members = new List<Renderable>();
+		members = new List<Renderable2D>();
 		create();
 	}
 
@@ -35,14 +35,14 @@ class State {
 		}
 	}
 
-	public function add(member : Renderable, front : Bool = true) {
+	public function add(member : Renderable2D, front : Bool = true) {
 		if (front)
 			members.add(member);
 		else
 			members.push(member);
 	}
 
-	public function remove(member : Renderable) {
+	public function remove(member : Renderable2D) {
 		members.remove(member);
 	}
 }

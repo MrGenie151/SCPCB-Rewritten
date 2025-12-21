@@ -3,7 +3,7 @@ package engine.renderables;
 import raylib.Raylib.*;
 import raylib.Types;
 
-class Entity extends Renderable {
+class Entity extends Renderable3D {
 	private var visible : Bool = true;
 	private var name : String = "Entity";
 	private var model : Model;
@@ -12,7 +12,7 @@ class Entity extends Renderable {
 	private var children : List<Entity> = new List<Entity>();
 	public static var orphans : List<Entity> = new List<Entity>();
 
-	private var globalPosition : Vector3 = new Vector3(0,0,0);
+	//private var globalPosition : Vector3 = new Vector3(0,0,0);
 
 	public function new( ?parent : Entity ) {
 		if (parent != null)
@@ -21,7 +21,7 @@ class Entity extends Renderable {
 
 	override public function draw() {
 		if (model != null) {
-			DrawModel(model,globalPosition,1,RAYWHITE);
+			DrawModel(model,position,1,RAYWHITE);
 			for (child in children) {
 				child.draw();
 			}
