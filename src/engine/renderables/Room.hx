@@ -1,5 +1,6 @@
 package engine.renderables;
 
+import haxe.ds.Vector;
 import engine.Exceptions;
 import raylib.Types;
 import sys.io.File;
@@ -29,6 +30,12 @@ class Room extends Renderable3D {
 	function read8(bytes : haxe.io.Bytes) {
 		var int = bytes.get(readPos);
 		readPos += 1;
+		return int;
+	}
+
+	function readFloat(bytes : haxe.io.Bytes) {
+		var int = bytes.getFloat(readPos);
+		readPos += 4;
 		return int;
 	}
 	
@@ -61,6 +68,41 @@ class Room extends Renderable3D {
 
 				var texflag = read8(fileBytes);
 				trace(texflag);
+
+				var texName = readPascalString(fileBytes);
+				trace(texName);
+
+				var texUVs = new Array<Vector2>();
+				var lmUVs = new Array<Vector2>();
+
+				var verticies = new Array<Vector3>();
+				var vertexCount = read32(fileBytes);
+				for (v in 0...vertexCount) {
+					var vert = new Vector3(0,0,0);
+					vert.x = readFloat(fileBytes);
+					vert.y = readFloat(fileBytes);
+					vert.z = -readFloat(fileBytes);
+
+					verticies.push(vert);
+
+					var texUV = new Vector2(0,0);
+					var lmUV = new Vector2(0,0);
+					texUV.x = readFloat(fileBytes);
+					texUV.y = readFloat(fileBytes);
+					lmUV.x = readFloat(fileBytes);
+					lmUV.y = readFloat(fileBytes);
+
+					texUVs.push(texUV);
+					lmUVs.push(lmUV);
+					readPos += 3;
+				}
+
+				var triCount = read32(fileBytes);
+				var triIndicies = new Array<Int>();
+				for (t in 0...triCount*3) {
+					triIndicies.push(read32(fileBytes));
+				}
+
 			}
 		} else {
 			throw new FileNotValid("The file does not exist.");
