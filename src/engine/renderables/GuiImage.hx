@@ -2,6 +2,7 @@ package engine.renderables;
 
 import raylib.Raylib.*;
 import raylib.Types;
+import game.Assets;
 
 class GuiImage extends Renderable2D {
 	var imagePath : String;
@@ -18,7 +19,7 @@ class GuiImage extends Renderable2D {
 
 	public function new(newImagePath,x = 0,y = 0,scale = 1.0,rotation = 0.0) {
 		imagePath = newImagePath;
-		texture = LoadTexture(imagePath);
+		texture = Assets.getImage(newImagePath);
 
 		position = new Vector2(x,y);
 		this.scale = scale;

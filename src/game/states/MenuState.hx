@@ -44,9 +44,9 @@ class MenuState extends State {
 
 	override function create() {
 		MenuScale = (GetScreenHeight() / 1024.0);
-		MenuBack = new GuiImage("assets/GFX/menu/back.jpg",0,0,MenuScale);
-		MenuText = new GuiImage("assets/GFX/menu/scptext.jpg",0,0,MenuScale);
-		MenuWhite = new GuiImage("assets/GFX/menu/menuwhite.jpg",0,0,MenuScale);
+		MenuBack = new GuiImage("menu/back.jpg",0,0,MenuScale);
+		MenuText = new GuiImage("menu/scptext.jpg",0,0,MenuScale);
+		MenuWhite = new GuiImage("menu/menuwhite.jpg",0,0,MenuScale);
 		MenuStr = new Text("Secure. Contain. Protect.",0,0,GameFonts.Font1);
 		MenuStr.size = 50 * (GetScreenHeight() / 1024.0);
 		//SetTextureWrap(MenuWhite,TEXTURE_WRAP_REPEAT);
