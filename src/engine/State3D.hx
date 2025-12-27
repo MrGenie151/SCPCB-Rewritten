@@ -13,7 +13,7 @@ class State3D extends State {
 		camera.projection = CameraProjection.CAMERA_PERSPECTIVE;
 		camera.fovy = 70;
 		camera.position = new Vector3(0,0,0);
-		camera.target = new Vector3(0.0, 0.0, 0.0); // Camera looking at point
+		camera.target = new Vector3(0.0, 0.0, -10.0); // Camera looking at point
 		camera.up = new Vector3(0.0, 1.0, 0.0); // Camera up vector (rotation towards target)
 	}
 
@@ -22,24 +22,23 @@ class State3D extends State {
 	}
 
 	override function draw() {
-		super.draw();
 		BeginMode3D(camera);
+		custom3DDraw();
 		for (member in members3D) {
 			member.draw();
 		}
-		custom3DDraw();
 		EndMode3D();
-
+		super.draw();
 	}
 
-	public function add2D(member : Renderable3D, front : Bool = true) {
+	public function add3D(member : Renderable3D, front : Bool = true) {
 		if (front)
 			members3D.add(member);
 		else
 			members3D.push(member);
 	}
 
-	public function remove2D(member : Renderable3D) {
+	public function remove3D(member : Renderable3D) {
 		members3D.remove(member);
 	}
 
