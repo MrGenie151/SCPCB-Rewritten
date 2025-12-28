@@ -1,5 +1,6 @@
 package game.states;
 
+import engine.renderables.Button;
 import engine.renderables.Text;
 import engine.renderables.GuiImage;
 import engine.State;
@@ -14,6 +15,7 @@ class MenuState extends State {
 	public var MenuText : GuiImage;
 	public var MenuWhite : GuiImage;
 	public var MenuStr : Text;
+	var NewGameButton : Button;
 
 	public static var MainMenuOpen : Bool = true;
 	public static var MenuOpen : Float;
@@ -49,10 +51,12 @@ class MenuState extends State {
 		MenuWhite = new GuiImage("menu/menuwhite.jpg",0,0,MenuScale);
 		MenuStr = new Text("Secure. Contain. Protect.",0,0,GameFonts.Font1);
 		MenuStr.size = 50 * (GetScreenHeight() / 1024.0);
+		NewGameButton = new Button("NEW GAME",10,10,Std.int(400 * MenuScale),Std.int(70 * MenuScale),GameFonts.Font1,58 * (GetScreenHeight() / 1024.0));
 		//SetTextureWrap(MenuWhite,TEXTURE_WRAP_REPEAT);
 		add(MenuBack);
 		add(MenuText);
 		add(MenuStr);
+		add(NewGameButton);
 	}
 
 	override function update(delta) {
@@ -68,6 +72,10 @@ class MenuState extends State {
 
 		if (GetScreenWidth() > 1240 * MenuScale) {
 			//DrawTexturePro(MenuWhite, new Rectangle(0,5,512, 7 * MenuScale),new Rectangle(0,0,(GraphicWidth - 1240 * MenuScale) + 300, 7 * MenuScale),new Vector2(985.0 * MenuScale, 407.0 * MenuScale),0,WHITE);
+		}
+
+		if (NewGameButton.clicked) {
+			trace("hey!");
 		}
 	}
 

@@ -1,6 +1,5 @@
 package engine.renderables;
 
-import haxe.ds.Vector;
 import engine.Exceptions;
 import raylib.Types;
 import sys.io.File;
@@ -38,6 +37,24 @@ class Room extends Renderable3D {
 		readPos += 4;
 		return int;
 	}
+
+	function createTriIndiciesPairs(verticies : Array<Vector3>, indicies : Array<Int>,data : Array<Array<Vector2>>) {
+		var pairs : Map<Int,Array<Vector3>> = new Map<Int,Array<Vector3>>();
+		var correctArrayPos = -1;
+
+		for (i in 0...indicies.length) {
+			correctArrayPos += 1;
+			if (!pairs.exists(indicies[i])) {
+				pairs[indicies[i]] = new Array<Vector3>();
+				pairs[indicies[i]].push(verticies[correctArrayPos]);
+				if (data.length > 0) {
+					for (j in data) {
+
+					}
+				}
+			}
+		}
+	}
 	
 	function loadRMesh(file) {
 		if (FileSystem.exists(file)) {
@@ -53,6 +70,8 @@ class Room extends Renderable3D {
 
 			var surfaceMap : Map<String, String> = new Map<String, String>();
 			var usedTextures : Array<String> = new Array<String>();
+
+			var mesh = new Mesh();
 
 			for (i in 0...texCount) {
 
