@@ -1,9 +1,18 @@
 package engine.renderables;
 
+import raylib.utils.SinglePointer;
+import cpp.Pointer;
+import cpp.NativeArray;
 import engine.Exceptions;
+import raylib.Raylib.*;
 import raylib.Types;
 import sys.io.File;
 import sys.FileSystem;
+
+typedef SurfaceData = {
+	var indicies:Array<Int>;
+	var pairs:Map<Int,Array<Dynamic>>;
+}
 
 class Room extends Renderable3D {
 
@@ -39,21 +48,43 @@ class Room extends Renderable3D {
 	}
 
 	function createTriIndiciesPairs(verticies : Array<Vector3>, indicies : Array<Int>,data : Array<Array<Vector2>>) {
-		var pairs : Map<Int,Array<Vector3>> = new Map<Int,Array<Vector3>>();
+		var pairs : Map<Int,Array<Dynamic>> = new Map<Int,Array<Dynamic>>();
 		var correctArrayPos = -1;
 
 		for (i in 0...indicies.length) {
 			correctArrayPos += 1;
 			if (!pairs.exists(indicies[i])) {
-				pairs[indicies[i]] = new Array<Vector3>();
+				pairs[indicies[i]] = new Array<Dynamic>();
 				pairs[indicies[i]].push(verticies[correctArrayPos]);
-				if (data.length > 0) {
+				if (data != null && data.length > 0) {
 					for (j in data) {
-
+						pairs[indicies[i]].push(j[correctArrayPos]);
 					}
 				}
+			} else {
+				correctArrayPos--;
 			}
 		}
+
+		return pairs;
+	}
+
+	function expandVector3Array(arr : Array<Vector3>) {
+		var newArray = [];
+		for (thing in arr) {
+			newArray.push(thing.x);
+			newArray.push(thing.y);
+			newArray.push(thing.z);
+		}
+		return newArray;
+	}
+	function expandVector2Array(arr : Array<Vector2>) {
+		var newArray = [];
+		for (thing in arr) {
+			newArray.push(thing.x);
+			newArray.push(thing.y);
+		}
+		return newArray;
 	}
 	
 	function loadRMesh(file) {
@@ -71,7 +102,7 @@ class Room extends Renderable3D {
 			var surfaceMap : Map<String, String> = new Map<String, String>();
 			var usedTextures : Array<String> = new Array<String>();
 
-			var mesh = new Mesh();
+			var meshs = new Array<Mesh>();
 
 			for (i in 0...texCount) {
 
@@ -90,6 +121,8 @@ class Room extends Renderable3D {
 
 				var texName = readPascalString(fileBytes);
 				trace(texName);
+				if (!usedTextures.contains(texName))
+					usedTextures.push(texName);
 
 				var texUVs = new Array<Vector2>();
 				var lmUVs = new Array<Vector2>();
@@ -121,6 +154,18 @@ class Room extends Renderable3D {
 				for (t in 0...triCount*3) {
 					triIndicies.push(read32(fileBytes));
 				}
+
+				//trace("Triangle Indicies: " + triIndicies.toString());
+				var surfaceMesh = new Mesh();
+				surfaceMesh.triangleCount = triCount;
+				surfaceMesh.vertexCount = vertexCount;
+				var vertexPointerArray = SinglePointer.fromValue(expandVector3Array(verticies));
+				surfaceMesh.vertices = vertexPointerArray;
+				var uvPointerArray = SinglePointer.fromValue(expandVector2Array(texUVs));
+				surfaceMesh.texcoords = uvPointerArray;
+
+				UploadMesh(surfaceMesh,true);
+				meshs.push(surfaceMesh);
 
 			}
 		} else {
