@@ -4,169 +4,169 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd scplogo.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh8
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd misc.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh7
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd door01.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh6
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd vent.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh5
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh40
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd 173bright_lm3.png
+map_Ka 173bright_lm3.png
 newmtl mesh4
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh39
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd door01.jpg
-map_Kd 173bright_lm3.png
+map_Ka 173bright_lm3.png
 newmtl mesh38
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd misc.jpg
-map_Kd 173bright_lm3.png
+map_Ka 173bright_lm3.png
 newmtl mesh37
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd 173bright_lm3.png
+map_Ka 173bright_lm3.png
 newmtl mesh36
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd whitewall.jpg
-map_Kd 173bright_lm3.png
+map_Ka 173bright_lm3.png
 newmtl mesh35
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd 173bright_lm3.png
+map_Ka 173bright_lm3.png
 newmtl mesh34
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd vent.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh33
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd scplogo.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh32
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd ceiling.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh31
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh30
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh3
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh29
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd tilefloor.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh28
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd misc.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh27
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd papertexture.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh26
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd red.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh25
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh24
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels2.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh23
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd controlpanel.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh22
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd whitewall.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh21
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd cloth.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh20
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh2
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
@@ -177,55 +177,55 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd door01.jpg
-map_Kd 173bright_lm2.png
+map_Ka 173bright_lm2.png
 newmtl mesh18
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd cloth.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh17
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels2.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh16
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd ceiling.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh15
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd whitewall.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh14
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd tilefloor.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh13
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd label173.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh12
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh11
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal3.jpg
-map_Kd 173bright_lm1.png
+map_Ka 173bright_lm1.png
 newmtl mesh10
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000

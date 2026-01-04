@@ -4,85 +4,85 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh8
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh7
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd door01.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh6
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd whitewall.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh5
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd controlpanel.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh4
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh3
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd medibay.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh2
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd officewall.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh14
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal.jpg
-map_Kd medibay_lm2.png
+map_Ka medibay_lm2.png
 newmtl mesh13
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels.jpg
-map_Kd medibay_lm2.png
+map_Ka medibay_lm2.png
 newmtl mesh12
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh11
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd labelmedicalbay.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh10
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd misc.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh1
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd tilefloor.jpg
-map_Kd medibay_lm1.png
+map_Ka medibay_lm1.png
 newmtl mesh0
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000

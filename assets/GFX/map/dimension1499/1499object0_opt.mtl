@@ -4,34 +4,34 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd grit1.jpg
-map_Kd 1499object0_lm3.png
+map_Ka 1499object0_lm3.png
 newmtl mesh4
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd grit2.jpg
-map_Kd 1499object0_lm3.png
+map_Ka 1499object0_lm3.png
 newmtl mesh3
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd grit1.jpg
-map_Kd 1499object0_lm2.png
+map_Ka 1499object0_lm2.png
 newmtl mesh2
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd grit2.jpg
-map_Kd 1499object0_lm2.png
+map_Ka 1499object0_lm2.png
 newmtl mesh1
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd grit1.jpg
-map_Kd 1499object0_lm1.png
+map_Ka 1499object0_lm1.png
 newmtl mesh0
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd grit2.jpg
-map_Kd 1499object0_lm1.png
+map_Ka 1499object0_lm1.png

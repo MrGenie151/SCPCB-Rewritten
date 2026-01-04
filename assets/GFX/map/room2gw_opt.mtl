@@ -4,25 +4,25 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd room2gw_lm2.png
+map_Ka room2gw_lm2.png
 newmtl mesh8
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd tilefloor.jpg
-map_Kd room2gw_lm1.png
+map_Ka room2gw_lm1.png
 newmtl mesh7
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd room2gw_lm1.png
+map_Ka room2gw_lm1.png
 newmtl mesh6
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd room2gw_lm1.png
+map_Ka room2gw_lm1.png
 newmtl mesh5
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
@@ -33,13 +33,13 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd controlpanel.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh40
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd miscsigns2.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh4
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
@@ -50,61 +50,61 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh38
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh37
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh36
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd miscsigns.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh35
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh34
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd room2gw_lm6.png
+map_Ka room2gw_lm6.png
 newmtl mesh33
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd vent.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh32
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh31
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd miscsigns.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh30
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh3
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
@@ -115,31 +115,31 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd miscsigns2.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh28
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels.jpg
-map_Kd room2gw_lm5.png
+map_Ka room2gw_lm5.png
 newmtl mesh27
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd room2gw_lm4.png
+map_Ka room2gw_lm4.png
 newmtl mesh26
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metalpanels.jpg
-map_Kd room2gw_lm4.png
+map_Ka room2gw_lm4.png
 newmtl mesh25
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd misc.jpg
-map_Kd room2gw_lm4.png
+map_Ka room2gw_lm4.png
 newmtl mesh24
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
@@ -150,25 +150,25 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd room2gw_lm4.png
+map_Ka room2gw_lm4.png
 newmtl mesh22
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal3.jpg
-map_Kd room2gw_lm4.png
+map_Ka room2gw_lm4.png
 newmtl mesh21
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal3.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh20
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd controlpanel.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh2
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
@@ -179,61 +179,61 @@ Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd door.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh18
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd misc.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh17
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd red.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh16
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd papertexture.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh15
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd metal.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh14
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd tilefloor.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh13
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd concretefloor.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh12
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd white.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh11
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd room2gw_lm2.png
+map_Ka room2gw_lm2.png
 newmtl mesh10
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000
 Ks 0.000 0.000 0.000
 map_Kd dirtymetal.jpg
-map_Kd room2gw_lm3.png
+map_Ka room2gw_lm3.png
 newmtl mesh1
 Kd 1.000 1.000 1.000
 Ka 1.000 1.000 1.000

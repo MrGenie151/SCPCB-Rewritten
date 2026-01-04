@@ -110,149 +110,146 @@ class ConvertRMesh {
 	
 	public static function convertRMesh(file) {
 		readPos = 0;
-		if (FileSystem.exists(file)) {
-			var fileBytes = File.getBytes(file);
-			var isRmesh = readPascalString(fileBytes);
-			trace(isRmesh);
+		
+		if (!FileSystem.exists(file)) return;
 
-			if (isRmesh != "RoomMesh" && isRmesh != "RoomMesh.HasTriggerBox") {
-				trace("File is not an RMesh file.");
-				return;
-			}
-				//throw new IncorrectFormat("File is not an RMesh file.");
+		var fileBytes = File.getBytes(file);
+		var isRmesh = readPascalString(fileBytes);
+		trace(isRmesh);
 
-			var texCount = read32(fileBytes);
-			trace(texCount);
-
-			//var surfaceMap : Map<String, String> = new Map<String, String>();
-			//var usedTextures : Array<String> = new Array<String>();
-
-			var verticies = new Array<Vector3>();
-			var texUVs = new Array<Vector2>();
-			var lmUVs = new Array<Vector2>();
-			var faces = new Array<Vector3>();
-			var faceMaterials = new Array<String>();
-			var materials : Map<String,Materials> = new Map<String,Materials>();
-
-			//var meshs = new Array<Mesh>();
-
-			for (i in 0...texCount) {
-
-				var matName = "mesh" + i;
-
-				var lmFlag = read8(fileBytes);
-				trace(lmFlag);
-				var lmName = "";
-
-				if (lmFlag == 2)
-					lmName = readPascalString(fileBytes);
-				else
-					read32(fileBytes);
-				trace(lmName);
-
-				var texflag = read8(fileBytes);
-				trace(texflag);
-
-				var texName = readPascalString(fileBytes);
-				trace(texName);
-				materials[matName] = new Materials();
-				materials[matName].mainMaterial = texName;
-				materials[matName].lightmapMaterial = lmName;
-
-				var vertIndicies = new Array<Int>();
-				var vertexCount = read32(fileBytes);
-				for (v in 0...vertexCount) {
-					var vert = new Vector3(0,0,0);
-					vert.x = readFloat(fileBytes);
-					vert.y = readFloat(fileBytes);
-					vert.z = -readFloat(fileBytes);
-
-					verticies.push(vert);
-					vertIndicies.push(verticies.length);
-
-					var texUV = new Vector2(0,0);
-					var lmUV = new Vector2(0,0);
-					texUV.x = readFloat(fileBytes);
-					texUV.y = 1.0 - readFloat(fileBytes);
-					lmUV.x = readFloat(fileBytes);
-					lmUV.y = 1.0 - readFloat(fileBytes);
-
-					texUVs.push(texUV);
-					lmUVs.push(lmUV);
-					readPos += 3;
-				}
-
-				var triCount = read32(fileBytes);
-				var triIndicies = new Array<Int>();
-				for (t in 0...triCount) {
-					var ind1 = read32(fileBytes);
-					var ind2 = read32(fileBytes);
-					var ind3 = read32(fileBytes);
-					var newFace = new Vector3(vertIndicies[ind1],vertIndicies[ind2],vertIndicies[ind3]);
-					faces.push(newFace);
-					faceMaterials.push(matName);
-				}
-
-			}
-
-			// TODO: Add entity support, for loading point entities.
-
-			var realpath = Path.withoutExtension(file);
-			var objPath = realpath + ".obj";
-			var mtlPath = realpath + ".mtl";
-			var mtlName = Path.withoutDirectory(realpath);
-			
-			var mtlOutput = File.write(mtlPath,false);
-			mtlOutput.writeString("# Exported from RMESH with dual textures\n");
-			for (name => material in materials) {
-				mtlOutput.writeString("newmtl "+ name +"\n");
-				mtlOutput.writeString("Kd 1.000 1.000 1.000\n");
-				mtlOutput.writeString("Ka 1.000 1.000 1.000\n");
-				mtlOutput.writeString("Ks 0.000 0.000 0.000\n");
-				if (material.mainMaterial.length > 0)
-					mtlOutput.writeString("map_Kd "+ material.mainMaterial +"\n");
-				if (material.lightmapMaterial.length > 0)
-					mtlOutput.writeString("map_Kd "+ material.lightmapMaterial +"\n");
-			}
-			mtlOutput.close();
-
-			var objOutput = File.write(objPath,false);
-			objOutput.writeString("# Converted from RMESH\n");
-			objOutput.writeString("mtllib " + mtlName + "\n");
-			for (v in verticies) {
-				var x = v.x;
-				var y = v.y;
-				var z = v.z;
-				objOutput.writeString('v $x $y $z\n');
-			}
-			
-			for (uv in texUVs) {
-				var u = uv.x;
-				var v = uv.y;
-				objOutput.writeString('vt $u $v\n');
-			}
-
-			var currentMaterial : Null<String> = null;
-			for (i in 0...faces.length) {
-				var face = faces[i];
-				var mat = faceMaterials[i];
-
-				if (mat != currentMaterial) {
-					objOutput.writeString('usemtl $mat\n');
-					currentMaterial = mat;
-				}
-
-				var f1 = face.x;
-				var f2 = face.y;
-				var f3 = face.z;
-
-				objOutput.writeString('f $f1/$f1 $f3/$f3 $f2/$f2\n');
-			}
-			objOutput.close();
-
-		} else {
-			//throw new FileNotValid("The file does not exist.");
-			trace("The file does not exist.");
+		if (isRmesh != "RoomMesh" && isRmesh != "RoomMesh.HasTriggerBox") {
+			trace("File is not an RMesh file.");
+			return;
 		}
+			//throw new IncorrectFormat("File is not an RMesh file.");
+
+		var texCount = read32(fileBytes);
+		trace(texCount);
+
+		//var surfaceMap : Map<String, String> = new Map<String, String>();
+		//var usedTextures : Array<String> = new Array<String>();
+
+		var verticies = new Array<Vector3>();
+		var texUVs = new Array<Vector2>();
+		var lmUVs = new Array<Vector2>();
+		var faces = new Array<Vector3>();
+		var faceMaterials = new Array<String>();
+		var materials : Map<String,Materials> = new Map<String,Materials>();
+
+		//var meshs = new Array<Mesh>();
+
+		for (i in 0...texCount) {
+
+			var matName = "mesh" + i;
+
+			var lmFlag = read8(fileBytes);
+			trace(lmFlag);
+			var lmName = "";
+
+			if (lmFlag == 2)
+				lmName = readPascalString(fileBytes);
+			else
+				read32(fileBytes);
+			trace(lmName);
+
+			var texflag = read8(fileBytes);
+			trace(texflag);
+
+			var texName = readPascalString(fileBytes);
+			trace(texName);
+			materials[matName] = new Materials();
+			materials[matName].mainMaterial = texName;
+			materials[matName].lightmapMaterial = lmName;
+
+			var vertIndicies = new Array<Int>();
+			var vertexCount = read32(fileBytes);
+			for (v in 0...vertexCount) {
+				var vert = new Vector3(0,0,0);
+				vert.x = readFloat(fileBytes);
+				vert.y = readFloat(fileBytes);
+				vert.z = -readFloat(fileBytes);
+
+				verticies.push(vert);
+				vertIndicies.push(verticies.length);
+
+				var texUV = new Vector2(0,0);
+				var lmUV = new Vector2(0,0);
+				texUV.x = readFloat(fileBytes);
+				texUV.y = 1.0 - readFloat(fileBytes);
+				lmUV.x = readFloat(fileBytes);
+				lmUV.y = 1.0 - readFloat(fileBytes);
+
+				texUVs.push(texUV);
+				lmUVs.push(lmUV);
+				readPos += 3;
+			}
+
+			var triCount = read32(fileBytes);
+			var triIndicies = new Array<Int>();
+			for (t in 0...triCount) {
+				var ind1 = read32(fileBytes);
+				var ind2 = read32(fileBytes);
+				var ind3 = read32(fileBytes);
+				var newFace = new Vector3(vertIndicies[ind1],vertIndicies[ind2],vertIndicies[ind3]);
+				faces.push(newFace);
+				faceMaterials.push(matName);
+			}
+
+		}
+
+		// TODO: Add entity support, for loading point entities.
+
+		var realpath = Path.withoutExtension(file);
+		var objPath = realpath + ".obj";
+		var mtlPath = realpath + ".mtl";
+		var mtlName = Path.withoutDirectory(realpath);
+		
+		var mtlOutput = File.write(mtlPath,false);
+		mtlOutput.writeString("# Exported from RMESH with dual textures\n");
+		for (name => material in materials) {
+			mtlOutput.writeString("newmtl "+ name +"\n");
+			mtlOutput.writeString("Kd 1.000 1.000 1.000\n");
+			mtlOutput.writeString("Ka 1.000 1.000 1.000\n");
+			mtlOutput.writeString("Ks 0.000 0.000 0.000\n");
+			if (material.mainMaterial.length > 0)
+				mtlOutput.writeString("map_Kd "+ material.mainMaterial +"\n");
+			if (material.lightmapMaterial.length > 0)
+				mtlOutput.writeString("map_Ka "+ material.lightmapMaterial +"\n");
+		}
+		mtlOutput.close();
+
+		var objOutput = File.write(objPath,false);
+		objOutput.writeString("# Converted from RMESH\n");
+		objOutput.writeString("mtllib " + mtlName + "\n");
+		for (v in verticies) {
+			var x = v.x;
+			var y = v.y;
+			var z = v.z;
+			objOutput.writeString('v $x $y $z\n');
+		}
+		
+		for (uv in texUVs) {
+			var u = uv.x;
+			var v = uv.y;
+			objOutput.writeString('vt $u $v\n');
+		}
+
+		var currentMaterial : Null<String> = null;
+		for (i in 0...faces.length) {
+			var face = faces[i];
+			var mat = faceMaterials[i];
+
+			if (mat != currentMaterial) {
+				objOutput.writeString('usemtl $mat\n');
+				currentMaterial = mat;
+			}
+
+			var f1 = face.x;
+			var f2 = face.y;
+			var f3 = face.z;
+
+			objOutput.writeString('f $f1/$f1 $f3/$f3 $f2/$f2\n');
+		}
+		objOutput.close();
 	}
 }
