@@ -1,0 +1,1 @@
+haxe build-unix.hxml --cmd bin/unix/SCPCBR

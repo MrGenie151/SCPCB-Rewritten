@@ -1,0 +1,85 @@
+# Exported from RMESH with dual textures
+newmtl mesh9
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh8
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd ceiling.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh7
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd officewall.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh6
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd tilefloor.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh5
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd boxfile_a.jpg
+newmtl mesh4
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd officeseat_a.jpg
+newmtl mesh3
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd crtbev.jpg
+newmtl mesh2
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd keyboard.jpg
+newmtl mesh14
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd chatscreen.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh13
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd misc.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh12
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd miscsigns2.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh11
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd controlpanel.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh10
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd dirtymetal.jpg
+map_Kd room2poffices_lm1.png
+newmtl mesh1
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd flat_monitor.jpg
+newmtl mesh0
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd 2_office_lamps_dif.jpg

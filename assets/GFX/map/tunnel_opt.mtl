@@ -1,0 +1,37 @@
+# Exported from RMESH with dual textures
+newmtl mesh5
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd concretefloor.jpg
+map_Kd tunnel_lm1.png
+newmtl mesh4
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd misc.jpg
+map_Kd tunnel_lm1.png
+newmtl mesh3
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd vent.jpg
+map_Kd tunnel_lm1.png
+newmtl mesh2
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd dirtymetal.jpg
+map_Kd tunnel_lm1.png
+newmtl mesh1
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal3.jpg
+map_Kd tunnel_lm1.png
+newmtl mesh0
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd concretewall.jpg
+map_Kd tunnel_lm1.png

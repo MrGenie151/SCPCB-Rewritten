@@ -1,0 +1,138 @@
+# Exported from RMESH with dual textures
+newmtl mesh9
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd misc.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh8
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metalpanels2.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh7
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal3.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh6
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd grass2.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh5
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd red.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh4
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd concretewall.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh3
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd dirtymetal.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh22
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd door01.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh21
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal_darker.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh20
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd misc.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh2
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd ctwalls2.png
+map_Kd room2shaft_lm1.png
+newmtl mesh19
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd ctwalls.png
+map_Kd room2shaft_lm2.png
+newmtl mesh18
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd ctwalls2.png
+map_Kd room2shaft_lm2.png
+newmtl mesh17
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd dirtymetal.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh16
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd concretefloor.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh15
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd concretewall.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh14
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal3.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh13
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metalpanels.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh12
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal.jpg
+map_Kd room2shaft_lm2.png
+newmtl mesh11
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metalpanels.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh10
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh1
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd concretefloor.jpg
+map_Kd room2shaft_lm1.png
+newmtl mesh0
+Kd 1.000 1.000 1.000
+Ka 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+map_Kd metal_darker.jpg

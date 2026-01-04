@@ -102,7 +102,7 @@ class Room extends Renderable3D {
 			var surfaceMap : Map<String, String> = new Map<String, String>();
 			var usedTextures : Array<String> = new Array<String>();
 
-			var meshs = new Array<Mesh>();
+			//var meshs = new Array<Mesh>();
 
 			for (i in 0...texCount) {
 
@@ -156,16 +156,16 @@ class Room extends Renderable3D {
 				}
 
 				//trace("Triangle Indicies: " + triIndicies.toString());
-				var surfaceMesh = new Mesh();
-				surfaceMesh.triangleCount = triCount;
-				surfaceMesh.vertexCount = vertexCount;
-				var vertexPointerArray = SinglePointer.fromValue(expandVector3Array(verticies));
-				surfaceMesh.vertices = vertexPointerArray;
-				var uvPointerArray = SinglePointer.fromValue(expandVector2Array(texUVs));
-				surfaceMesh.texcoords = uvPointerArray;
+				//var surfaceMesh = new Mesh();
+				//surfaceMesh.triangleCount = triCount;
+				//surfaceMesh.vertexCount = vertexCount;
+				//var vertexPointerArray = SinglePointer.fromValue(expandVector3Array(verticies));
+				//surfaceMesh.vertices = vertexPointerArray;
+				//var uvPointerArray = SinglePointer.fromValue(expandVector2Array(texUVs));
+				//surfaceMesh.texcoords = uvPointerArray;
 
-				UploadMesh(surfaceMesh,true);
-				meshs.push(surfaceMesh);
+				//UploadMesh(surfaceMesh,true);
+				//meshs.push(surfaceMesh);
 
 			}
 		} else {
