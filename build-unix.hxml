@@ -1,5 +1,6 @@
 --class-path src
 -D analyzer-optimize
+--debug
 -lib raylib-hx
 -dce full
 -main Main

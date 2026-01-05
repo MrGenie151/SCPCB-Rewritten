@@ -11,6 +11,7 @@ class TestState3D extends State3D {
 		DisableCursor();
 
 		var testRoom = new Room("assets/GFX/map/checkpoint1_opt.rmesh");
+		add3D(testRoom);
 	}
 
 	//override function draw() {

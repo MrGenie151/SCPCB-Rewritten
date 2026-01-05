@@ -23,6 +23,12 @@ class Vector3 extends Vector2 {
 		super(ax,ay);
 		z = az;
 	}
+
+	public function subtract(otherVector : Vector3) {
+		x -= otherVector.x;
+		y -= otherVector.y;
+		z -= otherVector.z;
+	}
 }
 
 class Materials {
@@ -36,6 +42,7 @@ class Materials {
 
 class ConvertRMesh {
 	static var readPos = 0;
+	static final SCALE_FACTOR:Float = 0.05;
 
 	static function readPascalString(bytes : haxe.io.Bytes) {
 		try {
@@ -107,15 +114,30 @@ class ConvertRMesh {
 		}
 		return newArray;
 	}
+
+	static function calculateNormalForVerticy(vector1 : Vector3, vector2 : Vector3, vector3 : Vector3) {
+		var vecEdge1 = new Vector3(vector1.x - vector2.x,vector1.y - vector2.y,vector1.z - vector2.z);
+		var vecEdge2 = new Vector3(vector1.x - vector3.x,vector1.y - vector3.y,vector1.z - vector3.z);
+
+		var crossProduct = new Vector3(
+			(vecEdge1.z * vecEdge2.y) - (vecEdge2.z * vecEdge1.y),
+			(vecEdge1.z * vecEdge2.x) - (vecEdge2.z * vecEdge1.x),
+			(vecEdge1.y * vecEdge2.x) - (vecEdge2.y * vecEdge1.x)
+		);
+
+		var r = Math.sqrt(crossProduct.x * crossProduct.x + crossProduct.y * crossProduct.y + crossProduct.z * crossProduct.z);
+		var normal = new Vector3(crossProduct.x / r, crossProduct.y / r, crossProduct.z / r);
+		return normal;
+	}
 	
 	public static function convertRMesh(file) {
 		readPos = 0;
-		
+
 		if (!FileSystem.exists(file)) return;
 
 		var fileBytes = File.getBytes(file);
 		var isRmesh = readPascalString(fileBytes);
-		trace(isRmesh);
+		//trace(isRmesh);
 
 		if (isRmesh != "RoomMesh" && isRmesh != "RoomMesh.HasTriggerBox") {
 			trace("File is not an RMesh file.");
@@ -124,7 +146,7 @@ class ConvertRMesh {
 			//throw new IncorrectFormat("File is not an RMesh file.");
 
 		var texCount = read32(fileBytes);
-		trace(texCount);
+		//trace(texCount);
 
 		//var surfaceMap : Map<String, String> = new Map<String, String>();
 		//var usedTextures : Array<String> = new Array<String>();
@@ -135,6 +157,7 @@ class ConvertRMesh {
 		var faces = new Array<Vector3>();
 		var faceMaterials = new Array<String>();
 		var materials : Map<String,Materials> = new Map<String,Materials>();
+		var normals = new Map<Int,Vector3>();
 
 		//var meshs = new Array<Mesh>();
 
@@ -143,17 +166,17 @@ class ConvertRMesh {
 			var matName = "mesh" + i;
 
 			var lmFlag = read8(fileBytes);
-			trace(lmFlag);
+			//trace(lmFlag);
 			var lmName = "";
 
 			if (lmFlag == 2)
 				lmName = readPascalString(fileBytes);
 			else
 				read32(fileBytes);
-			trace(lmName);
+			//trace(lmName);
 
 			var texflag = read8(fileBytes);
-			trace(texflag);
+			//trace(texflag);
 
 			var texName = readPascalString(fileBytes);
 			trace(texName);
@@ -165,9 +188,9 @@ class ConvertRMesh {
 			var vertexCount = read32(fileBytes);
 			for (v in 0...vertexCount) {
 				var vert = new Vector3(0,0,0);
-				vert.x = readFloat(fileBytes);
-				vert.y = readFloat(fileBytes);
-				vert.z = -readFloat(fileBytes);
+				vert.x = readFloat(fileBytes) * SCALE_FACTOR;
+				vert.y = readFloat(fileBytes) * SCALE_FACTOR;
+				vert.z = -readFloat(fileBytes) * SCALE_FACTOR;
 
 				verticies.push(vert);
 				vertIndicies.push(verticies.length);
@@ -191,6 +214,14 @@ class ConvertRMesh {
 				var ind2 = read32(fileBytes);
 				var ind3 = read32(fileBytes);
 				var newFace = new Vector3(vertIndicies[ind1],vertIndicies[ind2],vertIndicies[ind3]);
+
+				var vert1 = Std.int(newFace.x - 1);
+				var vert2 = Std.int(newFace.y - 1);
+				var vert3 = Std.int(newFace.z - 1);
+				normals[vert1] = calculateNormalForVerticy(verticies[vert1],verticies[vert2],verticies[vert3]);
+				normals[vert2] = calculateNormalForVerticy(verticies[vert2],verticies[vert1],verticies[vert3]);
+				normals[vert3] = calculateNormalForVerticy(verticies[vert3],verticies[vert1],verticies[vert2]);
+
 				faces.push(newFace);
 				faceMaterials.push(matName);
 			}
@@ -220,7 +251,7 @@ class ConvertRMesh {
 
 		var objOutput = File.write(objPath,false);
 		objOutput.writeString("# Converted from RMESH\n");
-		objOutput.writeString("mtllib " + mtlName + "\n");
+		objOutput.writeString("mtllib " + mtlName + ".mtl\n");
 		for (v in verticies) {
 			var x = v.x;
 			var y = v.y;
@@ -232,6 +263,13 @@ class ConvertRMesh {
 			var u = uv.x;
 			var v = uv.y;
 			objOutput.writeString('vt $u $v\n');
+		}
+
+		for (k => normal in normals) {
+			var x = normal.x;
+			var y = normal.y;
+			var z = normal.z;
+			objOutput.writeString('vn $x $y $z\n');
 		}
 
 		var currentMaterial : Null<String> = null;
@@ -248,7 +286,7 @@ class ConvertRMesh {
 			var f2 = face.y;
 			var f3 = face.z;
 
-			objOutput.writeString('f $f1/$f1 $f3/$f3 $f2/$f2\n');
+			objOutput.writeString('f $f1/$f1/$f1 $f3/$f3/$f3 $f2/$f2/$f2\n');
 		}
 		objOutput.close();
 	}

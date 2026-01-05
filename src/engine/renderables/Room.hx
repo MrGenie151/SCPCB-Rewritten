@@ -1,11 +1,9 @@
 package engine.renderables;
 
-import raylib.utils.SinglePointer;
-import cpp.Pointer;
-import cpp.NativeArray;
+import haxe.io.Path;
 import engine.Exceptions;
-import raylib.Raylib.*;
 import raylib.Types;
+import raylib.Raylib.*;
 import sys.io.File;
 import sys.FileSystem;
 
@@ -17,9 +15,17 @@ typedef SurfaceData = {
 class Room extends Renderable3D {
 
 	var readPos = 0;
+	var model : Model;
 
 	public function new(rmeshFile : String) {
-		loadRMesh(rmeshFile);
+		var realPath = Path.withoutExtension(rmeshFile) + ".obj";
+		model = LoadModel(realPath);
+	}
+
+	override function draw() {
+		super.draw();
+
+		DrawModel(model,position,1,WHITE);
 	}
 
 	function readPascalString(bytes : haxe.io.Bytes) {
