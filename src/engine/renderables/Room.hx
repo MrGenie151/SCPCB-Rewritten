@@ -1,5 +1,6 @@
 package engine.renderables;
 
+import cpp.Pointer;
 import haxe.io.Path;
 import engine.Exceptions;
 import raylib.Types;
@@ -20,12 +21,21 @@ class Room extends Renderable3D {
 
 	public function new(rmeshFile : String) {
 		var realPath = Path.withoutExtension(rmeshFile) + ".obj";
+		position = new Vector3(0,0,0);
+		rotation = new Vector3(0,0,0);
 		model = LoadModel(realPath);
 		for (i in 0...model.materialCount) {
 			var material = model.materials[i];
 			var texture = material.maps[MATERIAL_MAP_ALBEDO.toInt()].texture;
 			SetTextureFilter(texture, TEXTURE_FILTER_BILINEAR);
 		}
+	}
+
+	override function update(delta:Single) {
+		super.update(delta);
+
+		rotation.x += .1;
+		model.transform = MatrixRotateXYZ(new Vector3(0,45 * DEG2RAD,0));
 	}
 
 	override function draw() {

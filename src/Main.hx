@@ -20,6 +20,8 @@ class Main
 
         InitWindow(screenWidth, screenHeight, "SCP: Containment Breach v" + version);
 
+		SetConfigFlags(FLAG_MSAA_4X_HINT);
+
 		InitAudioDevice();
 
         SetTargetFPS(60); // Set our game to run at 60 frames-per-second
