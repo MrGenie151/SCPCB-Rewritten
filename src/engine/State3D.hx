@@ -31,6 +31,14 @@ class State3D extends State {
 		super.draw();
 	}
 
+	override function update(delta:Single) {
+		super.update(delta);
+
+		for (member3D in members3D) {
+			member3D.update(delta);
+		}
+	}
+
 	public function add3D(member : Renderable3D, front : Bool = true) {
 		if (front)
 			members3D.add(member);

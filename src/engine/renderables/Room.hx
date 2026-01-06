@@ -4,6 +4,7 @@ import haxe.io.Path;
 import engine.Exceptions;
 import raylib.Types;
 import raylib.Raylib.*;
+import raylib.Raymath.*;
 import sys.io.File;
 import sys.FileSystem;
 
@@ -20,6 +21,11 @@ class Room extends Renderable3D {
 	public function new(rmeshFile : String) {
 		var realPath = Path.withoutExtension(rmeshFile) + ".obj";
 		model = LoadModel(realPath);
+		for (i in 0...model.materialCount) {
+			var material = model.materials[i];
+			var texture = material.maps[MATERIAL_MAP_ALBEDO.toInt()].texture;
+			SetTextureFilter(texture, TEXTURE_FILTER_BILINEAR);
+		}
 	}
 
 	override function draw() {
