@@ -7,4 +7,4 @@
 -main Main
 -cpp bin/win
 -D HAXE_OUTPUT_PART=SCPCBR
---cmd cp -r assets bin/unix/
+-cmd xcopy /E /I /Y /Q assets bin\win\assets
